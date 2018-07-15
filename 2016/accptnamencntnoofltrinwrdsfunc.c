@@ -1,0 +1,45 @@
+
+#include<stdio.h>
+void main()
+{
+    char name[100],fname[100];
+    printf("Enter the sentence:");
+    gets(name);
+    disp(name);
+
+}
+void disp(char name[])
+{
+    char fname[100];
+    int i=0,c=0,j=0,k=0;
+     if(i==0)
+    {
+        while(name[i]!=' ')
+        {
+            fname[j]=name[i];
+            c++;
+            j++;
+            i++;
+        }
+    }
+    fname[j]='\0';
+    printf("%s=%d\n\n",fname,c);
+        i=i+1;
+   while(name[i]!='\0')
+        {
+            c=0;
+            while(name[i]!=' ' && name[i]!='\0')
+            {
+                fname[k]=name[i];
+                c++;
+                k++;
+                i++;
+            }
+            fname[k]='\0';
+            printf("%s=%d\n\n",fname,c);
+            i++;
+            if(name[i-1]=='\0')
+                break;
+            k=0;
+        }
+}
